@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class BirdScript : MonoBehaviour
 {
     public Rigidbody2D myrigidbody2D;
+    public float birdStrength;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,7 +16,7 @@ public class BirdScript : MonoBehaviour
     {
         if (Keyboard.current.spaceKey.wasPressedThisFrame) 
         { 
-            myrigidbody2D.linearVelocity = Vector2.up * 10;
+            myrigidbody2D.linearVelocity = Vector2.up * birdStrength;
         }
 
     }
